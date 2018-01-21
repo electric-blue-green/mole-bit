@@ -32,16 +32,16 @@ def show_mole_tl(mole_number, gamemode, score):
         display.clear()
         score = score + 1
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     elif button_b.is_pressed():
         display.clear()
         score = score
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     sleep(1500)
     display.clear()
     return
@@ -52,16 +52,16 @@ def show_mole_tr(mole_number, gamemode, score):
         display.clear()
         score = score + 1
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     elif button_a.is_pressed():
         display.clear()
         score = score
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     sleep(1500)
     display.clear()
     return
@@ -72,16 +72,16 @@ def show_mole_br(mole_number, gamemode, score):
         display.clear()
         score = score + 1
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     elif button_a.is_pressed():
         display.clear()
         score = score
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     sleep(1500)
     display.clear()
     return
@@ -92,16 +92,16 @@ def show_mole_bl(mole_number, gamemode, score):
         display.clear()
         score = score + 1
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     elif button_b.is_pressed():
         display.clear()
         score = score
         score_display = str(score)
-        display.scroll(score_display)
+        display.show(score_display)
         sleep(300)
-        main(mole_number, gamemode, score)
+        return
     sleep(1500)
     display.clear()
     return
@@ -109,7 +109,7 @@ def show_mole_bl(mole_number, gamemode, score):
 def main(mole_number, gamemode, score):
     while gamemode == 0:
         mole_number = random.randint(1, 4)
-        if mole_number ==1:
+        if mole_number == 1:
             show_mole_tl(mole_number, gamemode, score)
         elif mole_number == 2:
             show_mole_tr(mole_number, gamemode, score)

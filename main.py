@@ -28,92 +28,96 @@ mole_bl = Image("00000:"    ## mole_number = 4
                 "99000:"
                 "99000")
 def show_mole_tl(mole_number, gamemode, score):
-    display.show(mole_tl)
-    if button_a.is_pressed():
+    while True:
+        display.show(mole_tl)
+        if button_a.is_pressed():
+            display.clear()
+            score += 1
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        elif button_b.is_pressed():
+            display.clear()
+            score = score
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        sleep(1000)
         display.clear()
-        score += 1
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
         return
-    elif button_b.is_pressed():
-        display.clear()
-        score = score
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
-        return
-    sleep(1500)
-    display.clear()
-    return
 
 def show_mole_tr(mole_number, gamemode, score):
-    display.show(mole_tr)
-    if button_b.is_pressed():
+    while True:
+        display.show(mole_tr)
+        if button_b.is_pressed():
+            display.clear()
+            score += 1
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        elif button_a.is_pressed():
+            display.clear()
+            score = score
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        sleep(1000)
         display.clear()
-        score += 1
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
         return
-    elif button_a.is_pressed():
-        display.clear()
-        score = score
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
-        return
-    sleep(1500)
-    display.clear()
-    return
 
 def show_mole_br(mole_number, gamemode, score):
-    display.show(mole_br)
-    if button_b.is_pressed():
+    while True:
+        display.show(mole_br)
+        if button_b.is_pressed():
+            display.clear()
+            score += 1
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        elif button_a.is_pressed():
+            display.clear()
+            score = score
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        sleep(1000)
         display.clear()
-        score += 1
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
         return
-    elif button_a.is_pressed():
-        display.clear()
-        score = score
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
-        return
-    sleep(1500)
-    display.clear()
-    return
 
 def show_mole_bl(mole_number, gamemode, score):
-    display.show(mole_br)
-    if button_a.is_pressed():
+    while True:
+        display.show(mole_br)
+        if button_a.is_pressed():
+            display.clear()
+            score += 1
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        elif button_b.is_pressed():
+            display.clear()
+            score = score
+            global score
+            score_display = str(score)
+            display.show(score_display)
+            sleep(300)
+            return
+        sleep(1000)
         display.clear()
-        score += 1
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
         return
-    elif button_b.is_pressed():
-        display.clear()
-        score = score
-        global score
-        score_display = str(score)
-        display.show(score_display)
-        sleep(300)
-        return
-    sleep(1500)
-    display.clear()
-    return
 
 def main(mole_number, gamemode, score):
     while gamemode == 0:

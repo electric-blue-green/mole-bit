@@ -1,3 +1,4 @@
+__author__ = "@electric-blue-green"
 from microbit import *
 import random
 gamemode = 0
@@ -30,7 +31,8 @@ def show_mole_tl(mole_number, gamemode, score):
     display.show(mole_tl)
     if button_a.is_pressed():
         display.clear()
-        score = score + 1
+        score += 1
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -38,6 +40,7 @@ def show_mole_tl(mole_number, gamemode, score):
     elif button_b.is_pressed():
         display.clear()
         score = score
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -50,7 +53,8 @@ def show_mole_tr(mole_number, gamemode, score):
     display.show(mole_tr)
     if button_b.is_pressed():
         display.clear()
-        score = score + 1
+        score += 1
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -58,6 +62,7 @@ def show_mole_tr(mole_number, gamemode, score):
     elif button_a.is_pressed():
         display.clear()
         score = score
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -70,7 +75,8 @@ def show_mole_br(mole_number, gamemode, score):
     display.show(mole_br)
     if button_b.is_pressed():
         display.clear()
-        score = score + 1
+        score += 1
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -78,6 +84,7 @@ def show_mole_br(mole_number, gamemode, score):
     elif button_a.is_pressed():
         display.clear()
         score = score
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -90,7 +97,8 @@ def show_mole_bl(mole_number, gamemode, score):
     display.show(mole_br)
     if button_a.is_pressed():
         display.clear()
-        score = score + 1
+        score += 1
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
@@ -98,6 +106,7 @@ def show_mole_bl(mole_number, gamemode, score):
     elif button_b.is_pressed():
         display.clear()
         score = score
+        global score
         score_display = str(score)
         display.show(score_display)
         sleep(300)
